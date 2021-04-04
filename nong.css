@@ -1,0 +1,105 @@
+html{
+	/* background: linear-gradient(red 0%,#000 80%); */
+	height: 100%;
+	/* background: #fff url() repeat top left; */
+	background-image: url('img/bg.jpg');
+}
+.warp{
+	width: 200px;
+	height: 200px;
+	margin: 150px 360px;
+	position: relative;
+}
+.cude{
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	transform-style: preserve-3d;
+	transform: rotateX(-30deg)rotateY(-80deg);
+	-webkit-animation: rotate 20s infinite;
+	animation-timing-function: linear;
+}
+@-webkit-keyframes rotate{
+	from{transform: rotateX(0deg) rotateY(0deg);}
+	to{transform: rotateX(360deg) rotateY(360deg);}
+}
+.cude div{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	opacity: 0.8;
+	transition: all .4s;
+}
+.pic{
+	width: 200px;
+	height: 200px;
+}
+.cude .out-front{
+	transform: rotateX(0deg) translateZ(100px);
+}
+.cude .out-back{
+	transform: translateZ(-100px) rotateY(180deg);
+}
+.cude .out-left{
+	transform: rotateY(90deg) translateZ(100px);
+}
+.cude .out-right{
+	transform: rotateY(-90deg) translateZ(100px);
+}
+.cude .out-top{
+	transform: rotateX(90deg) translateZ(100px);
+}
+.cude .out-bottom{
+	transform: rotateX(-90deg) translateZ(100px);
+}
+
+.cude span{
+	display: block;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+.cude .in-pic{
+	width:100px;
+	height: 100px;
+}
+.cude .in-front{
+	transform: rotateY(0deg) translateZ(50px);
+}
+.cude .in-back{
+	transform: translateZ(-50px) rotateY(180deg);
+}
+.cude .in-left{
+	transform: rotateY(90deg) translateZ(50px);
+}
+.cude .in-right{
+	transform: rotateY(-90deg) translateZ(50px);
+}
+.cude .in-top{
+	transform: rotateX(90deg) translateZ(50px);
+}
+.cude .in-bottom{
+	transform: rotateX(-90deg) translateZ(50px);
+}
+
+
+.cude:hover .out-front{
+	transform: rotateY(0deg) translateZ(200px);
+}
+.cude:hover .out-back{
+	transform: translateZ(-200px) rotateY(180deg);
+}
+.cude:hover .out-left{
+	transform: rotateY(90deg) translateZ(200px);
+}
+.cude:hover .out-right{
+	transform: rotateY(-90deg) translateZ(200px);
+}
+.cude:hover .out-top{
+	transform: rotateX(90deg) translateZ(200px);
+}
+.cude:hover .out-bottom{
+	transform: rotateX(-90deg) translateZ(200px);
+}
